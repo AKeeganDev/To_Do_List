@@ -1,51 +1,103 @@
+$background: #f6f6f6;
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: bisque;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #f6f6f6;
 }
 
-input[type=checkbox] {
-  visibility: hidden;
+label {
+  display: flex;
+  align-items: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.task-input {
+  margin-left: 5px;
+  font-style: italic;
+  font-size: 20px;
+}
+
+input {
+  display: flex;
+  margin-left: 35px;
+  padding: 5px;
+  border: none;
+  font-size: 25px;
+  width: 400px;
+}
+
+button.check-box,
+.check-box {
   cursor: pointer;
-}
-
-.mark {
+  border: none;
   position: absolute;
-  top: 0;
-  height: 25px;
-  width: 25px;
-  background-color: lightgray;
+  min-height: 28px;
+  min-width: 28px;
+  background-color: white;
+  color: white;
+  outline: 3px solid lightgray;
+  text-align: center;
+  font-size: 25px;
+  padding: 0;
 }
 
+.check-box:hover {
+  position: absolute;
+  background-color: lightgray;
+  outline: 3px solid lightgray;
+}
 
+.check-box:focus {
+  position: absolute;
+  background-color: lightgray;
+  outline: 3px solid lightgray;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
 .list-container {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: $background;
   width: 500px;
+  padding: 0;
+  box-shadow: -3px 3px 4px 3px lightgrey;
 
   .task-input {
-    width: 96%;
+    width: 100%;
     padding: 10px 0 10px 20px;
     border: none;
+    margin-left: 0;
+    border-bottom: 2px solid $background;
   }
 
   ul {
     list-style: none;
     margin: 0;
     padding: 0;
+    border-bottom: 2px solid $background;
 
     li {
-      width: 100%;
+      display: flex;
+      align-items: center;
       padding: 10px 15px;
+      background-color: white;
+      border-bottom: 2px solid $background;
     }
   }
 
-  button {
-    background-color: none;
+  .clear-button {
+    background: none;
     text-align: center;
     width: 100%;
     border: none;
@@ -58,10 +110,6 @@ h4 {
   padding: 10px;
   margin: 0;
   background-color: white;
-}
-
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  font-size: 30px;
+  border-bottom: 2px solid $background;
 }
