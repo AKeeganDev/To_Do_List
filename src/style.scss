@@ -1,0 +1,143 @@
+$background: #f6f6f6;
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f6f6;
+}
+
+label {
+  display: flex;
+  align-items: center;
+}
+
+input {
+  display: flex;
+  margin-left: 35px;
+  padding: 5px;
+  border: none;
+  font-size: 25px;
+  width: 400px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input.task-input {
+  margin-left: 5px;
+  font-style: italic;
+  font-size: 20px;
+}
+
+button.check-box,
+.check-box {
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  min-height: 28px;
+  min-width: 28px;
+  background-color: white;
+  color: white;
+  outline: 3px solid lightgray;
+  text-align: center;
+  font-size: 25px;
+  padding: 0;
+}
+
+.check-box:hover {
+  position: absolute;
+  background-color: lightgray;
+  outline: 3px solid lightgray;
+}
+
+.check-box.checked {
+  outline: none;
+  background: white;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  background-color: $background;
+  width: 500px;
+  padding: 0;
+  box-shadow: -3px 3px 4px 3px lightgrey;
+
+  .task-input {
+    width: 400px;
+    padding: 10px 0 10px 20px;
+    border: none;
+    margin-left: 0;
+    background-color: white;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 2px solid $background;
+
+    li {
+      display: flex;
+      align-items: center;
+      padding: 10px 15px;
+      background-color: white;
+      border-bottom: 2px solid $background;
+    }
+  }
+
+  .clear-button {
+    cursor: pointer;
+    background: none;
+    text-align: center;
+    width: 100%;
+    border: none;
+    padding: 1rem;
+    text-decoration: underline;
+  }
+}
+
+#turn {
+  transform: rotate(180deg);
+}
+
+svg {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  color: grey;
+}
+
+.header {
+  padding-right: 17px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  border-bottom: 2px solid $background;
+}
+
+.input-container {
+  padding-right: 17px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid $background;
+}
+
+h4 {
+  padding: 10px;
+  margin: 0;
+  font-size: 30px;
+}
