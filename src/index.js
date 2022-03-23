@@ -8,4 +8,5 @@ import '@fortawesome/fontawesome-free/js/regular.js';
 import '@fortawesome/fontawesome-free/js/brands.js';
 
 const pageManager = new PageManager();
-pageManager.loadTasks();
+pageManager.loadTasksFromClass();
+pageManager.pageSetup();
