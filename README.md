@@ -1,5 +1,5 @@
 # To Do List
-> This web page was made with Ubuntu 20.04 + VS Code 1.64.2
+> A simple web app that allows a user to keep a list of things to do and manage the list in real-time
 
 ## Built with
 - HTML
