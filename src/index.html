@@ -6,32 +6,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>To Do List</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 </head>
 
 <body>
   <div class="list-container">
-    <h4>Today's To Do</h4>
-    <label for="task-input">
-      <input class="task-input" name="task-input" id="task-input" type="text" placeholder="Add to your list...">
-    </label>
+    <div class="header">
+      <h4>Today's To Do</h4>
+      <i class="fa-solid fa-arrows-rotate"></i>
+    </div>
+    <div class="input-container">
+      <label for="task-input">
+        <input class="task-input" name="task-input" id="task-input" type="text" placeholder="Add to your list...">
+      </label>
+      <i id="turn" class="fa-solid fa-share"></i>
+    </div>
     <ul>
       <li class="task">
-        <span class="check-box"></span>
         <label for="cheese">
+          <button type="button" class="check-box">&check;</button>
           <input type="text" value="Cheese?" name="cheese" id="cheese">
         </label>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
       </li>
       <li class="task">
         <label for="cheese">
           <button type="button" class="check-box">&check;</button>
           <input type="text" value="Cheese?" name="cheese" id="cheese">
         </label>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
       </li>
       <li class="task">
         <label for="cheese">
-          <span class="check-box">&check;</span>
+          <button type="button" class="check-box">&check;</button>
           <input type="text" value="Cheese?" name="cheese" id="cheese">
         </label>
+        <i class="fa-solid fa-ellipsis-vertical"></i>
       </li>
       <button class="clear-button" type="button">Clear all completed</button>
     </ul>

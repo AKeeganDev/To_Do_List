@@ -74,11 +74,11 @@ ul {
   box-shadow: -3px 3px 4px 3px lightgrey;
 
   .task-input {
-    width: 100%;
+    width: 400px;
     padding: 10px 0 10px 20px;
     border: none;
     margin-left: 0;
-    border-bottom: 2px solid $background;
+    background-color: white;
   }
 
   ul {
@@ -97,19 +97,48 @@ ul {
   }
 
   .clear-button {
+    cursor: pointer;
     background: none;
     text-align: center;
     width: 100%;
     border: none;
     text-decoration: none;
     padding: 1rem;
+    text-decoration: underline;
   }
+}
+
+#turn {
+  transform: rotate(180deg);
+}
+
+svg {
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  color: grey;
+}
+
+.header {
+  padding-right: 17px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  align-items: center;
+  border-bottom: 2px solid $background;
+}
+
+.input-container {
+  padding-right: 17px;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid $background;
 }
 
 h4 {
   padding: 10px;
   margin: 0;
-  background-color: white;
   font-size: 30px;
-  border-bottom: 2px solid $background;
 }
