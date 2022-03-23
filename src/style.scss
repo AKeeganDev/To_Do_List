@@ -1,3 +1,67 @@
 body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=checkbox] {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.mark {
+  position: absolute;
+  top: 0;
+  height: 25px;
+  width: 25px;
+  background-color: lightgray;
+}
+
+
+
+.list-container {
+  display: flex;
+  flex-direction: column;
   background-color: white;
+  width: 500px;
+
+  .task-input {
+    width: 96%;
+    padding: 10px 0 10px 20px;
+    border: none;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      width: 100%;
+      padding: 10px 15px;
+    }
+  }
+
+  button {
+    background-color: none;
+    text-align: center;
+    width: 100%;
+    border: none;
+    text-decoration: none;
+    padding: 1rem;
+  }
+}
+
+h4 {
+  padding: 10px;
+  margin: 0;
+  background-color: white;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
