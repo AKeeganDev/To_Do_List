@@ -125,6 +125,7 @@ export default class PageManager {
   }
 
   addTask = () => {
+    if (!this.taskInput.value) return;
     const counter = this.taskList.length + 1;
     const newTask = new Task(this.taskInput.value);
     newTask.index = counter;
