@@ -3,8 +3,6 @@ import Task from './task.js';
 export default class PageManager {
   taskList = [];
 
-  storageTaskList;
-
   storageKeyTaskList = 'storageTaskList';
 
   storageValueTaskList;
@@ -29,6 +27,18 @@ export default class PageManager {
     });
   }
 
+  pushTasksToStorage = () => {
+    const tasksObj = {};
+    let counter = 1;
+    for (let i = 0; i < this.taskList.length; i += 1) {
+      tasksObj[counter] = this.taskList[i];
+      counter += 1;
+    }
+    this.storageValueTaskList = JSON.stringify(tasksObj);
+    localStorage.setItem(this.storageKeyTaskList, this.storageValueTaskList);
+  }
+
+
   loadTasksFromClass = () => {
     this.domTaskList.innerHTML = '';
     for (let i = 0; i < this.taskList.length; i += 1) {
@@ -48,11 +58,18 @@ export default class PageManager {
     this.taskList.push(newTask);
     this.taskInput.value = '';
     this.loadTasksFromClass();
+    this.pushTasksToStorage();
   }
 
   pageSetup = () => {
     this.addButton.addEventListener('click', () => {
       this.addTask();
     });
+
+    this.taskInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        this.addTask();
+      }
+    })
   };
 }
