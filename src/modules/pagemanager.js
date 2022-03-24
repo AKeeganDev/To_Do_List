@@ -53,6 +53,9 @@ export default class PageManager {
       input.addEventListener('focusin', (e) => {
         const index = parseInt(e.target.parentElement.parentElement.id, 10) + 1;
         let icon = document.getElementById(`index${index}`);
+        icon.addEventListener('click', (e) => {
+          console.log('trashcan');
+        })
         icon.innerHTML = Task.toTrashCan(index);
         icon = document.getElementById(`index${index}`);
       });
