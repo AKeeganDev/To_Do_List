@@ -15,7 +15,10 @@
 > NOT AVAILABLE AT THIS TIME
 
 ## Getting Started
->So far all of the elements in this site are static and will have limited to no interaction. Please check in later!
+>1) To get started please open your terminal and navigate to whatever directory you house your project repos. 
+>2) Once there copy and paste this SSH key git@github.com:AKeeganDev/To_Do_List.git
+>3) A new Directory will be made. From there you can cd (change directory) to To_Do_List
+>4) Either from your directory or straight from the folder itself, open the index.html file in the /dist folder to view the latest build of the website live on your browser of choice. I suggest using Chrome as that was the browser used in development of this site.
 
 ## Authors
 **Aaron Keegan**
