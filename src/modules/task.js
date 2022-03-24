@@ -9,5 +9,5 @@ export default class Task {
       <button type="button" class="check-box">&check;</button>
       <input type="text" value="${this.description}" name="Item${this.index}" id="${this.index}">
     </label>
-    <i class="fa-solid fa-ellipsis-vertical"></i>`
+    <i id="index${this.index}" class="fa-solid fa-ellipsis-vertical"></i>`
 }

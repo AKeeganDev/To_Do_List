@@ -38,6 +38,16 @@ export default class PageManager {
     localStorage.setItem(this.storageKeyTaskList, this.storageValueTaskList);
   }
 
+  pullFromStorage = () => {
+    const tasksObj = JSON.parse(localStorage.getItem(this.storageKeyTaskList));
+    Object.values(tasksObj).forEach((task) => {
+      const index = this.taskList.length + 1;
+      const oldTask = new Task(task.description);
+      oldTask.index = index;
+      this.taskList.push(oldTask);
+      console.log(oldTask);
+    })
+  }
 
   loadTasksFromClass = () => {
     this.domTaskList.innerHTML = '';
@@ -56,12 +66,15 @@ export default class PageManager {
     const newTask = new Task(this.taskInput.value);
     newTask.index = counter;
     this.taskList.push(newTask);
+    console.log(newTask);
     this.taskInput.value = '';
     this.loadTasksFromClass();
     this.pushTasksToStorage();
   }
 
   pageSetup = () => {
+    this.pullFromStorage();
+    this.loadTasksFromClass();
     this.addButton.addEventListener('click', () => {
       this.addTask();
     });
