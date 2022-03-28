@@ -9,7 +9,7 @@
 
 ## Live Demo
 - Live version: 
-> Coming Soon..
+> https://akeegandev.github.io/To_Do_List/
 
 - Mobile version:
 > NOT AVAILABLE AT THIS TIME
